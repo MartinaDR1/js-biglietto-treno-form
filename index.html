@@ -14,11 +14,11 @@
     <title>Train Bool</title>
 </head>
 <body>
-    <div class="container py-5">
-        <div class="ticket row d-flex">
+    <div class="container py-5 my-4 border">
+        <div class="ticket row d-flex justify-content-center">
             <div class="col-4">
                 <h6>Nome e cognome</h6>
-                <input type="text" nome ="username" value="">
+                <input type="text" nome ="username" value="" id="user">
             </div>
 
             <div class="col-4">
@@ -32,18 +32,46 @@
 
                 <select class="form-select w-25" id="age">
                     <option value="under18">0-18</option>
-                    <option value="over18">18-65</option>
+                    <option value="">18-65</option>
                     <option value="over65">65+</option>
                 </select>
             </div>
 
-            <input id="send" class="btn btn-primary w-auto" type="submit" value="submit">
+            <input id="send" class="btn btn-primary w-auto my-3" type="submit" value="submit">
 
-
-            
         </div>
     </div>
 
+    <div id="ticket" class="container border my-5 d-none">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-center py-3">Dettagli passeggero</h5>
+                <div class="row">
+                    <div class="col-4">
+                        <h6>Nome passeggero</h6>
+                        <p id="name"></p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Offerta</h6>
+                        <p id="offer"></p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Carrozza</h6>
+                        <p id="carriage"></p>
+                    </div>
+                    <div class="col-2">
+                        <h6>Codice CP</h6>
+                        <p id="cp"></p>
+                    </div>
+
+                    <div class="col-2">
+                        <h6>Costo biglietto</h6>
+                        <p id="price"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- script -->
