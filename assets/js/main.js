@@ -9,6 +9,9 @@ let userAge = document.getElementById('age').value;
 
 btnSend.addEventListener('click', function(){
 
+    let username = document.getElementById('user').value;
+    let kmEl = Number(document.getElementById('km').value);
+    let userAge = document.getElementById('age').value;
 
     console.log(kmEl, userAge, username);
 
@@ -65,5 +68,9 @@ btnReset.addEventListener('click', function(){
     document.getElementById('user').value = "";
     document.getElementById('km').value= "";
     document.getElementById('age').value ="";
+
+    // Elimino il biglietto
+    ticket.classList.add('d-none');
+    
 
 })
