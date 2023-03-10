@@ -5,3 +5,8 @@ body{
 #ticket{
     background-color: rgb(195, 255, 235);
 }
+
+.send_ms, .reset_ms{
+    width: 6rem;
+    margin-left: 2rem;
+}

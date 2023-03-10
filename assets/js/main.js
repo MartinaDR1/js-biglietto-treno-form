@@ -1,11 +1,13 @@
 // Valutare il prezzo del biglietto sulla base ai km (0.21 € al km)
 const btnSend = document.getElementById('send');
+const btnReset = document.getElementById('reset');
+
+let username = document.getElementById('user').value;
+let kmEl = Number(document.getElementById('km').value);
+let userAge = document.getElementById('age').value;
 
 
 btnSend.addEventListener('click', function(){
-    let username = document.getElementById('user').value;
-    let kmEl = Number(document.getElementById('km').value);
-    let userAge = document.getElementById('age').value;
 
 
     console.log(kmEl, userAge, username);
@@ -50,7 +52,18 @@ btnSend.addEventListener('click', function(){
     const priceTotalTicket = document.getElementById('price');
     priceTotalTicket.innerHTML =  priceTotal
 
-    //
+    // Faccio apparire il biglietto
     ticket.classList.remove('d-none');
+
+    //Pulisco i campi
+     document.getElementById('user').value = "";
+     document.getElementById('km').value="";
+     document.getElementById('age').value ="";
 });
 
+btnReset.addEventListener('click', function(){
+    document.getElementById('user').value = "";
+    document.getElementById('km').value= "";
+    document.getElementById('age').value ="";
+
+})
